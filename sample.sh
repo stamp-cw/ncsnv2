@@ -1,0 +1,1 @@
+python main.py --sample --config cifar10.yml -i cifar10

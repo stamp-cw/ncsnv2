@@ -6,7 +6,7 @@ pathlib2
 Pillow
 protobuf
 protobuf3-to-dict
-PyYAML==5.1
+PyYAML
 scikit-image
 scikit-learn
 scipy
@@ -18,3 +18,4 @@ torchvision
 tqdm
 typing
 urllib3
+lmdb
