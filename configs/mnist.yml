@@ -1,8 +1,8 @@
 training:
   batch_size: 128
   n_epochs: 500000
-  n_iters: 30000001
-  snapshot_freq: 4000
+  n_iters: 3000001
+  snapshot_freq: 1200
   snapshot_sampling: true
   anneal_power: 2
   log_all_sigmas: false
@@ -37,9 +37,9 @@ test:
   batch_size: 100
 
 data:
-  dataset: "CIFAR10"
+  dataset: "MNIST"
   image_size: 32
-  channels: 3
+  channels: 1
   logit_transform: false
   uniform_dequantization: false
   gaussian_dequantization: false
