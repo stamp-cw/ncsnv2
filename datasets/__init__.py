@@ -1,7 +1,7 @@
 import os
 import torch
 import torchvision.transforms as transforms
-from torchvision.datasets import CIFAR10, LSUN
+from torchvision.datasets import CIFAR10, LSUN,MNIST
 from datasets.celeba import CelebA
 from datasets.ffhq import FFHQ
 from torch.utils.data import Subset
@@ -31,6 +31,10 @@ def get_dataset(args, config):
                                transform=test_transform)
 
     elif config.data.dataset == 'MNIST':
+        MNIST.mirrors = [
+            "https://dufs.v-v.icu/mnist/",
+            "https://ossci-datasets.s3.amazonaws.com/mnist/"
+        ]
         dataset = MNIST(os.path.join(args.exp, 'datasets', 'mnist'), train=True, download=True,
                           transform=tran_transform)
         test_dataset = MNIST(os.path.join(args.exp, 'datasets', 'mnist_test'), train=False, download=True,
